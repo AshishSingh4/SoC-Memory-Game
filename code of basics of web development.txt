@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basics of Web Development</title>
+  <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.o1rWRTz9T2Zfy1UXEneHPgHaHv?pid=ImgDet&w=172.19132369299223&h=180&c=7&dpr=1.1">
+<style>
+h1  {background-color:limegreen;
+     color:white;
+     padding:40px;
+     margin:0;
+     text-align:center;}
+h4  {word-spacing:30px;
+     background-color:black;
+     margin:0px;
+     padding:5px;
+     font-family:arial;
+     color:orange;
+     text-align:center;}
+table, th, td {
+     border:1px solid white;
+     border-collapse: collapse;
+     text-align:center;}
+a:link {
+     color:cyan;
+     text-decoration: none;
+}
+a:visited {
+     color:orange;
+     text-decoration:none;}
+a:hover {
+     color:red;
+     text-decoration:underline;}
+a:active {
+     color: yellow;
+     text-decoration:none;}
+</style>
+</head>
+<body>
+<header class="header">
+<h1>Basics of Web Development</h1>
+</header>
+<h4><a href="#introduction">Introduction</a> <a href="#html">HTML</a> <a href="#css">CSS</a> <a href="#javascript">JavaScript</a></h4>
+<h2 id="introduction">Introduction</h2>
+<ol>
+<li>introduction</li>
+<ul style="list-style-type:disc;">
+<li>Basic concepts</li>
+<li>History of HTML</li>
+</ul>
+<li>Structure</li>
+<ul>
+<li>Elements</li>
+<li>Tags</li>
+</ul>
+<li>Attributes</li>
+<ul style="list-style-type:square;">
+<li>Global attributes</li>
+<li>Specific attributes</li>
+</ol>
+<p>Web development is the work involved in developing a website for the internet or an intranet. It can range from developing a simple single static page of plain text to complex web application,electronic businesses, and social network services</p>
+<p style="background-color:rgb(240,240,240); padding:10px;"><q>Web development is a broad term for the work involved in developing a website for the internet or intranet</q></p>
+<p><b>Key Elements</b>: HTML, CSS, JavaScript</p>
+<a href="https://www.w3schools.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.tWJBwTsb8Sc3s_1ZMzihvgHaHa?pid=ImgDet&w=180&h=180&c=7&dpr=1.1" alt="Web Development"></a>
+<p>To learn from w3schools click on image above</p>
+<p>Check out <a href="https://developer.mozilla.org/en-US/" target="_top">MDN Web Docs</a> for detailed documentation</p>
+<p>Learn more at <a href="https://www.google.co.in/" target="_self">Google</a></p>
+<p>Explore <a href="https://www.w3schools.com/html/exercise.asp" target="_parent">Example Site</a></p>
+<hr>
+<h2 id="html">Html</h2>
+<p><abbr title="Hyper Text Markup Language">HTML</abbr> is the standard language for creating wed pages. HTML describes the structure of a web page using markup. HTML elements are the building blocks of HTML pages.</p>
+<pre style="background-color:rgb(240,240,240); padding:20px;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is a Heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>The <mark>&lt;mark&gt;</mark> tag highlights text, while <del>&lt;del&gt;</del> and <ins>&lt;ins&gt;</ins> tags show deleted and inserted text, respectively.</p>
+<hr>
+<h2 id="css">CSS</h2>
+<p>CSS stands for <i><b>Cascading Style Sheets</b></i>. It describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p>
+<a href="https://css-tricks.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.gqKJMFtVccuyx6-Nnldz4QHaD6?pid=ImgDet&w=191&h=119.47325102880659&c=7&dpr=1.1"></a>
+<p>For any inqueries, email us at <a href="mailto:info@webdev.com">info@webdev.com.</a></p>
+<p>Understanding image maps:</p>
+<img src="family.png" alt="Image map" usemap="#family">
+<map name="family">
+<area shape="rect" coords="0,0,334,164" href="https://en.wikipedia.org/wiki/Family">
+</map>
+<p>Responsive images with the &lt;picture&gt; element:</p>
+<p>Change width to observe changes</p>
+<picture>
+<source media="(min-width: 900px)" srcset="sun.png">
+<img src="https://th.bing.com/th/id/OIP.OB59sgY4GSOsxobSwsK4fgHaB-?pid=ImgDet&w=191&h=62.5241979336596&c=7&dpr=1.1">
+</picture>
+<p style="background-image: url('https://th.bing.com/th/id/OIP.cc6Bnz4WSxzcyS9A4S5rGAHaEK?pid=ImgDet&w=191&h=107.4375&c=7&dpr=1.1'); color:white">This is a background image with a text on it you can see that to<br> ha ha ha.<br>This is a background image with a text on it you can see that to <br>ha ha ha<br>I repeated the text twice.<br> simple na<br>.</p>
+<p>Some beautiful tables like this can be made &#128567;</p>
+<table style="width:100%">
+<colgroup>
+<col span="1" style="background-color:limegreen; color:white;">
+<col span="1" style="background-color:pink">
+<col span="1" style="background-color:cyan">
+<col span="2" style="background-color:rgb(240,240,240)">
+</colgroup>
+<tr style="height:30px; background-color:limegreen; color:white;">
+<td rowspan="2">Category</td>
+<td colspan="3">Item Details</td>
+<td rowspan="2">Price</td>
+</tr>
+<tr style="height:30px;">
+<td>Name</td>
+<td>Description</td>
+<td style="background-color:limegreen">Quantity</td>
+</tr>
+<tr style="height:30px">
+<td>Electronics</td>
+<td>Laptop</td>
+<td>High performance laptop for gaming and work</td>
+<td>1</td>
+<td>$1200</td>
+</tr>
+<tr style="height:30px">
+<td>Furniture</td>
+<td>Desk</td>
+<td>Ergonomic office desk</td>
+<td>1</td>
+<td>$250</td>
+</tr>
+<tr style="height:30px">
+<td>Stationary</td>
+<td>Notebook</td>
+<td>A4 size, 100 pages</td>
+<td>5</td>
+<td>$15</td>
+</tr>
+</table>
+<hr>
+<h2 id="javascript">Javascript</h2>
+<p>JavaScript is a programming language commonly used in web development. It was originally developed by Netscape as a means to add dynamic and interactive elements to websites. JavaScript is versatile and beginner-friendly.</p>
+<pre style="background-color:rgb(240,240,240); padding:20px;">
+document.addEventlistener('DOMContentLoaded', (event) => {
+    document.getElementById('myButton').addEventListener('click',function() {
+        alert('Hello, World!');
+    });
+});
+</pre>
+<button id="message">Click Me</button>
+<script>
+document.getElementById('message').addEventListener('click', function() {
+alert('Hello, World!');
+});
+</script>
+<p>Visit our <button onclick="window.location.href='https://www.javascript.com/'">JavaScript Website</button> for more information.</p>
+<p>Common elements used in Javascript include <sub>subscript</sub> and <sup>superscript</sup> text.</p>
+<p><b>JavaScript Example</b></p>
+<button type="button" onclick="text()">Change text</button>
+<p id="change">This is changeable text.</p>
+<script>
+function text() {
+ document.getElementById("change").innerHTML= "The text has been changed";}
+</script>
+<script>
+function emoji(sw) {
+var pic;
+if (sw == 0) {
+  pic = "https://th.bing.com/th/id/OIP.Kjm2SFgp9LDC_JSQ4Q6RKAHaHa?pid=ImgDet&w=180&h=180&c=7&dpr=1.1"
+} else {
+  pic="https://th.bing.com/th/id/OIP.yvIS2S7zb6GSyV9SbSHpswHaHa?pid=ImgDet&w=180&h=180&c=7&dpr=1.1"
+}
+ document.getElementById('image').src = pic;
+}
+</script>
+<img id="image" src="https://th.bing.com/th/id/OIP.yvIS2S7zb6GSyV9SbSHpswHaHa?pid=ImgDet&w=180&h=180&c=7&dpr=1.1">
+<p>
+<button type="button" onclick="emoji(1)">Sad</button>
+<button type="button" onclick="emoji(0)">Happy</button>
+</p>
+<hr>
+<footer class="footer" style="text-align:center; background-color:black; color:white;">
+<h3>Contact Us:</h3>
+<P>Web Development Inc.</p>
+<p>123 Web Street, Web City, WB 12345</p>
+<a href="mailto:aashishsingh64g@gmail.com">our gmail</a>
+<p>&copy; 2024 Basics of Web Development</p>
+</footer>
+</body>
+</html>
