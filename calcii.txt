@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+.calculator {
+justify-content: center;
+background-color: black;
+border: 2px solid grey;
+padding: 20px;
+width: 200px;
+margin: 100px;}
+.display {
+width:100%;
+height: 50px;
+text-align: right;
+margin-bottom :5px;
+fontsize:40px;
+}
+.buttons{
+width: 100%;
+}
+.buttons button {
+width: 25%;
+height: 50px;
+margin: 2%;
+font-size: 20px;
+}
+</style> 
+</head>
+<body>
+<div class="calculator">
+<input type="text" class= "display" id="display">
+<div class="buttons">
+<button onclick="clearDisplay()">C</button>
+<button onclick="appendOperator('+')">+</button>
+<button onclick="deleteLast()">Del</button>
+<button onclick="appendNumber(7)">7</button>
+<button onclick="appendNumber(8)">8</button>
+<button onclick="appendNumber(9)">9</button>
+<button onclick="appendNumber(4)">4</button>
+<button onclick="appendNumber(5)">5</button>
+<button onclick="appendNumber(6)">6</button>
+<button onclick="appendNumber(1)">1</button>
+<button onclick="appendNumber(2)">2</button>
+<button onclick="appendNumber(3)">3</button>
+<button onclick="appendOperator('.')">.</button>
+<button onclick="appendNumber(0)">0</button>
+<button onclick="appendOperator('*')">*</button>
+<button onclick="appendOperator('/')">/</button>
+<button onclick="appendOperator('-')">-</button>
+<button onclick="calculate()">=</button>
+</div>
+</div>
+<script>
+function appendNumber(number){
+   document.getElementById('display').value += number;
+}
+function appendOperator(operator) {
+const display = document.getElementById('display');
+const currentValue = display.value;
+const lastChar = currentValue.charAt(currentValue.length - 1);
+if (['+', '-', '*', '/'].includes(lastChar)) {
+display.value = currentValue.slice(0, -1) + operator;
+}
+else{
+display.value += operator;
+}
+}
+function clearDisplay() {
+   document.getElementById('display').value = '';
+}
+function calculate() {
+const display = document.getElementById('display');
+try {
+display.value = eval(display.value);
+}
+catch(e) {
+display.value = 'Error';
+}
+}
+function deleteLast() {
+const display = document.getElementById('display');
+display.value = display.value.slice(0,-1);
+}
+</script>
+</body>
+</html>
