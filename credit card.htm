@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Credit Card</title>
+<style>
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0%;  
+}
+.box {
+perspective: 1000px;
+}
+.card {
+width: 360px;
+height: 180px;
+position: relative;
+transition: transform 0.5s;
+transform-style: preserve-3d;
+}
+.card:hover {
+transform: rotateY(180deg);
+}
+.card .front, .card .back {
+position: absolute;
+width: 100%;
+height: 110%;
+backface-visibility: hidden;
+border-radius: 10px;
+}
+.card .front {
+background-image: url('background.jpg');
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding:5%;
+}
+.card .back {
+background-image: url('background.jpg');
+color: white;
+transform: rotateY(180deg);
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding:5%;
+}
+.black {
+height: 40px;
+background-color: black;
+padding:0%;
+}
+</style>
+</head>
+<body>
+<div class="box">
+<div class="card" onclick="this.classList.toggle('flip')">
+<div class="front">
+<h3><img src="https://th.bing.com/th/id/OIP.GbJqmBr9pBV113X2wKKuvQHaEu?pid=ImgDet&w=191&h=119.375&c=7&dpr=1.1" width="32" height="28">Master Card</h3>
+<p style="margin-bottom:1px;">Card Number</p>
+<p style="margin-top:1px; margin-bottom:2x;">1234 5678 9012 3456</p>
+<p style="margin-top:1px; margin-bottom:1px;">ASHISH SINGH</p>
+<p style="margin-bottom:1px; margin-top:1px; text-align:right;">valid till</p>
+<p style="margin-top:1px; text-align:right;">04/28</p>
+</div>
+<div class="back">
+<p>if lost or stolen please send to near bank</p>
+<div class="black"></div>
+<p>CVV:005</p>
+<p>Some important text is written here.
+as i said it is some important text.</p>
+</div>
+</div>
+</div>
+<script>
+document.querySelector('.card').addEventListener('click',function() {
+this.classList.toggle('flip');
+});
+</script>
+</body>
+</html>
+
